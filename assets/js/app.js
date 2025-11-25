@@ -62,7 +62,13 @@ const makeAPiCall = (URL, method, body) => {
 
     return fetch(URL, obj)
 
-        .then(res => res.json())
+        .then(res => {
+            if(!res.ok){
+                throw new Error("Something went wrong !!!")
+            }else{
+                return res.json()
+            }
+        })
         .catch(err => {
             cl(err)
         })
