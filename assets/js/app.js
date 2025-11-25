@@ -39,7 +39,7 @@ function snackbar(title, icon) {
 }
 
 
-let BASE_URL = "https://xhr-crud-929ee-default-qwertyui-rtdb.firebaseio.com";
+let BASE_URL = "https://xhr-crud-929ee-default-rtdb.firebaseio.com";
 let BLOG_URL = `${BASE_URL}/blogs.json`;
 
 
