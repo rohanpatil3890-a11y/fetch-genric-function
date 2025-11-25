@@ -158,7 +158,7 @@ const onRemove = (ele) => {
 
 
     Swal.fire({
-        title: "Do you want to remove the Movie?",
+        title: "Do you want to remove the Blog?",
         showCancelButton: true,
         confirmButtonText: "Remove",
         denyButtonText: `Remove`,
