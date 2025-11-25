@@ -39,7 +39,7 @@ function snackbar(title, icon) {
 }
 
 
-let BASE_URL = "https://xhr-crud-929ee-default-rtdb.firebaseio.com";
+let BASE_URL = "https://xhr-crud-929ee-default-qwertyui-rtdb.firebaseio.com";
 let BLOG_URL = `${BASE_URL}/blogs.json`;
 
 
@@ -64,13 +64,13 @@ const makeAPiCall = (URL, method, body) => {
 
         .then(res => {
             if(!res.ok){
-                throw new Error("Something went wrong !!!")
+                throw new Error("Data Not Found !!!")
             }else{
                 return res.json()
             }
         })
         .catch(err => {
-            cl(err)
+           snackbar(err,"error")
         })
         .finally(() =>{
             loader(false)
